@@ -1,0 +1,209 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+#plantilla{
+    background-image: url(./imagenes/fondotienda.png);
+    display: grid;
+    height: 100vh;
+    max-width: auto;
+    grid-template-areas: 
+    " header header header header"
+    " navegacion servicios1 servicios1 publicidad4"
+    " navegacion servicios2 servicios2 publicidad5"
+    " navegacion servicios3 servicios3 publicidad6"
+    " navegacion footer footer footer"
+    ;
+    grid-template-rows: 50px 1fr 1fr 1fr 50px;
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+   
+}
+header{
+    grid-area: header;
+    background-color: black;
+    font-family: 'Righteous', cursive;
+    font-size: 16px;
+    color: white;
+    justify-items: center;
+    align-items: center;
+    display: grid;
+
+}
+footer{
+    grid-area: footer;
+    background-color: black;
+    font-family: 'Righteous', cursive;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: grid;
+}
+footer img {
+    grid-area: footer;
+    display: grid;
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+
+
+.border {
+    border: 3px;
+    border-color: black;
+    border-style: solid;
+}
+.navegacion{
+    grid-area: navegacion;
+    background: rgb(206, 47, 36);
+    opacity: 0.8;
+    
+    
+
+}
+.navegacion nav ul li {
+    color: black;
+    display: grid;
+    justify-items: center;
+    justify-content: center;
+    height: 90px;
+    grid-area: navegacion;
+    font-family: 'Righteous', cursive;
+    font-size: 16px;
+    color: black;
+    text-align: center;
+   
+}
+.servicios1 {
+    display: grid;
+    grid-area: servicios1;
+    background-color: white;
+    background-image: url(./imagenes/bajo4cuerdas.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-family: 'Righteous', cursive;
+    font-size: 16px;
+    color: black;
+    justify-content: center;
+}
+.servicios2 {
+    display: grid;
+    grid-area: servicios2;
+    background-color: white;
+    background-image: url(./imagenes/bajo5cuerdas.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-family: 'Righteous', cursive;
+    font-size: 16px;
+    color: black;
+    justify-content: center;
+
+}
+.servicios3 {
+    display: grid;
+    grid-area: servicios3;
+    background-color: white;
+    background-image: url(./imagenes/bajo6cuerdas.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-family: 'Righteous', cursive;
+    font-size: 16px;
+    color: black;
+    justify-content: center;
+}
+.publicidad4 {
+    display: grid;
+    grid-area: publicidad4;
+    background-color: white;
+    font-family: 'Righteous', cursive;
+    font-size: 16px;
+    color: black;
+    justify-content:center;
+    align-content: center;
+    padding: 10px;
+    
+
+}
+.publicidad5 {
+    display: grid;
+    grid-area: publicidad5;
+    background-color: white;
+    font-family: 'Righteous', cursive;
+    font-size: 16px;
+    color: black;
+    justify-content:center;
+    align-content: center;
+    padding: 10px;
+}
+.publicidad6 {
+    display: grid;
+    grid-area: publicidad6;
+    background-color: white;
+    font-family: 'Righteous', cursive;
+    font-size: 16px;
+    color: black;
+    justify-content:center;
+    align-content: center;
+    padding: 10px;
+}
+
+@media (max-width:768px){
+    body{
+background: black;
+}
+    #plantilla {
+        display: grid;
+        height: 100vh;
+        grid-template-areas: 
+        " navegacion header header header"
+        " navegacion servicios1 servicios1 publicidad4"
+        " navegacion servicios2 servicios2 publicidad5"
+        " navegacion servicios3 servicios3 publicidad6"
+        " navegacion footer footer footer"
+        
+            ;
+            grid-template-rows:  50px 1fr 1fr 1fr 50px;
+            grid-template-columns: 1fr 2fr 2fr 2fr;
+            grid-column-gap: 1px;
+            grid-row-gap: 1px;
+       }
+}
+@media (min-width: 1200px) {
+    #plantilla {
+        display: grid;
+        height: 100vh;
+        grid-template-areas: 
+        " header header header header"
+        " navegacion servicios1 servicios1 publicidad4"
+        " navegacion servicios2 servicios2 publicidad5"
+        " navegacion servicios3 servicios3 publicidad6"
+        " navegacion footer footer footer"
+        ;
+        grid-template-rows: 50px 1fr 1fr 1fr 50px;
+        grid-template-columns: 1fr 2fr 2fr 2fr;
+        grid-column-gap: 15px;
+        grid-row-gap: 15px;
+       }
+
+   
+}
+.servicios1 h2 {
+    font-family: Arial, Helvetica, sans-serif
+    font-size: 16px;
+    text-align: center;
+    
+}
+.servicios2 h2 {
+    font-family: Arial, Helvetica, sans-serif
+    font-size: 16px;
+    text-align: center;
+    
+}

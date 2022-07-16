@@ -1,0 +1,120 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.border {
+    border: 3px;
+    border-color: black;
+    border-style: solid;
+}
+.navegacion{
+    justify-content: center;
+    background-color: black;
+    margin: 0;
+    color: white;
+    font-family: 'Righteous', cursive;
+    font-size: 16px;
+    display: flex;
+  
+    align-items: center;
+    width: 100%;
+    float: none;
+}
+.navegacion nav ul li{
+ display: inline;
+ margin: 10px 5px;
+
+
+}
+.section__Quienes{
+    background-color: black;
+   ;
+    
+}
+.section__Quienes__contenedor{
+    color: rgb(255, 255, 255);
+    display: grid;
+    grid-template-areas: 
+" .     texto1       .       ."
+" .     .       titulo       ."
+" .     .       titulo       texto2"
+    ;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 3fr);
+    /*max-width: 700px;*/
+    margin: auto;
+}
+.section__Quienes__titulo{
+    font-size: 3rem;
+    font-weight: 900;
+    background-size: cover;
+    background-position: center;
+    grid-area: titulo;
+    }
+.section__Quienes__texto1{
+grid-area: texto1;
+}
+.section__Quienes__texto2{
+grid-area: texto2;
+}
+.section__Acerca{
+    margin: auto;
+    max-width: 700px;
+    display: grid;
+    grid-template-areas: 
+    " titulo imagen"
+    " texto imagen"
+    ;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+    align-items: center;
+    justify-content: center;
+}
+@media (max-width: 768px) {
+
+    .section__Acerca{
+    grid-template-areas : 
+    " . titulo"
+    " . texto" 
+    " . imagen"
+    ;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: 190px 120px auto 1fr;
+}}
+.section__Acerca__card p{
+    grid-area: texto;
+}
+.section__Acerca__card h2{
+    font-size: 2rem;
+    grid-area: titulo;
+}
+@media (min-width:1200px) {
+    .navegacion nav ul li{
+        background-color: aqua;
+        display: inline;
+    }
+    .section__Quienes__texto1{
+        grid-area: texto1;
+        display: grid;
+        color: blueviolet;
+        }
+        .section__Quienes__texto2{
+            grid-area: texto2;
+            display: grid;
+            color: brown;
+            }
+            .section__Quienes__titulo{
+                font-size: 3rem;
+                font-weight: 900;
+                background-size: cover;
+                background-position: center;
+                grid-area: titulo;
+                color: red;
+                }
+                .section__Acerca{
+                    background-color: rgb(247, 247, 240);
+                }
+    
+}

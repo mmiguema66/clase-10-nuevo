@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+#plantilla{
+    background-image: url(./imagenesinicio/fondo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: grid;
+}
+#plantilla img{
+    width: 100%;
+}
+
+#plantilla{
+    display: grid;
+    height: 100vh;
+    grid-template-areas: 
+    " . header header ."
+    " navegacion productos productos productos"
+    " navegacion servicios servicios publicidad"
+    " . footer footer ."
+    ;
+    grid-template-rows: 50px 1fr 3fr 50px;
+    grid-template-columns: 1fr 2fr 2fr 2fr;
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+   
+}
+header{
+    grid-area: header;
+    background-color: black;
+    justify-items: center;
+    align-items: center;
+    display: grid;
+    color: white;
+    font-family:  ;
+
+}
+footer{
+    grid-area: footer;
+    background-color: black;
+    color: red;
+    font-family: 'Righteous', cursive;
+    font-size: 16px;
+    text-align: center;
+    justify-items: center;
+}
+.verde{
+    background-color: greenyellow;
+}
+.amarillo{
+    background-color: yellow;
+}
+.border {
+    border: 3px;
+    border-color: black;
+    border-style: solid;
+}
+
+.navegacion {
+    grid-area: navegacion;
+    background: rgb(206, 47, 36);
+    opacity: 0.8;
+
+}
+.navegacion nav ul li{
+    color: black;
+    display: grid;
+    justify-items: center;
+    justify-content: center;
+    height: 90px;
+    font-family: 'Righteous', cursive;
+    font-size: 16px;
+    color: black;
+    text-align: center;
+   
+}
+.productos {
+    grid-area: productos;
+    display: grid;
+    justify-items: center;
+    justify-content: center;
+    background: rgb(206, 47, 36);
+    opacity: 0.8;
+    font-family: 'Righteous', cursive;
+    font-size: 16px;
+    color: black;
+    text-align: justify;
+}
+.servicios {
+grid-area: servicios;
+background-image: url(./imagenesinicio/bajosdeinicio.png);
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+}
+.productos img{
+    width: 100%;
+}
+.publicidad {
+    grid-area: publicidad;
+    background-color: black;
+    background-image: url(./imagenesinicio/logobassman.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+@media (max-width:768px){
+
+    #plantilla {
+        
+        grid-template-areas: 
+        "  navegacion header  "
+        "  navegacion productos  "
+        "  navegacion servicios "
+        "  navegacion footer  "
+        ;
+        grid-template-rows: 50px 1fr 3fr 50px;
+        grid-template-columns: 1fr 2fr;
+        grid-column-gap: 1px;
+        grid-row-gap: 1px;
+    }
+        .navegacion nav ul li{
+            height: 50px;
+       
+    }
+}
+@media (min-width: 1200px) {
+    #plantilla {
+        
+        grid-template-areas: 
+        " header header header header"
+        "  navegacion productos productos publicidad"
+        "  navegacion servicios servicios publicidad"
+        " footer footer footer footer"
+        ;
+        grid-template-rows: 50px 1fr 3fr 50px;
+        grid-column-gap: 15px;
+        grid-row-gap: 15px;
+    }
+
+   
+}

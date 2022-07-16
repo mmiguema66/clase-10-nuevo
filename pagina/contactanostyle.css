@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+#plantilla{
+    display: grid;
+    height: 100vh;
+    max-width: auto;
+    background-image: url(./imagenes/fondotienda.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    grid-template-areas: 
+    "navegacion header   header   header"
+    "navegacion producto producto producto"
+    "navegacion producto producto producto"
+    "navegacion producto producto producto"
+    "navegacion footer   footer   footer"
+    ;
+    grid-template-rows: 50px 1fr 1fr 1fr 50px;
+    grid-template-columns: 100px 1fr 1fr 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+
+header{
+    grid-area: header;
+    background-color: black;
+    justify-items: center; /*horizontal*/
+    align-items: center; /*vertical*/
+    display: grid;
+    justify-content: center;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    font-family: 'Righteous', cursive;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    background-position: center;
+} 
+footer{
+    grid-area: footer;
+    background-color: black;
+    color: red;
+    font-family: 'Righteous', cursive;
+    font-size: 16px;
+    text-align: center;
+    justify-items: center;
+    display: grid;
+ }
+    
+.navegacion {
+    display: grid;
+    grid-area: navegacion;
+    background: rgb(206, 47, 36);
+    opacity: 0.8;
+    
+}
+.navegacion nav ul li {
+    color: black;
+    display: grid;
+    justify-items: center;
+    justify-content: center;
+    height: 90px;
+    grid-area: navegacion;
+    font-family: 'Righteous', cursive;
+    font-size: 16px;
+    color: rgb(245, 7, 7);
+    text-align: center;
+}
+
+
+.producto{
+display: grid;
+grid-area: producto;
+background-image: url(../imagenesinicio/logobassman.png);
+font-family: 'Righteous', cursive;
+font-size: 16px;
+color: rgb(240, 10, 10);
+text-align: center;
+background-position: center;
+background-repeat: no-repeat;
+background-size: contain;
+}
+
+
+.border{
+    border: 3px;
+    border-color: black;
+    border-style: solid;
+  }
+
+@media (max-width:768px){
+
+    #plantilla {
+        display: grid;
+        height: 1850px;
+        grid-template-areas: 
+        " . header"
+        " navegacion producto"
+        " navegacion"
+        " navegacion"
+        " . footer"
+        ;
+        grid-template-rows: 50px 1fr 3fr 1fr 50px;
+        grid-template-columns: 150px 2fr 2fr
+        ;
+        grid-column-gap: 1px;
+        grid-row-gap: 1px;
+    }
+
+    
+    }
+
+@media (min-width: 1200px) {
+    #plantilla {
+       
+        grid-template-areas: 
+        "navegacion header   header   header"
+        "navegacion producto producto producto"
+        "navegacion producto producto producto"
+        "navegacion producto producto producto"
+        "navegacion footer footer footer"
+        ;
+        grid-template-rows: 50px 1fr 3fr 50px;
+        grid-template-columns: 250px 1fr 1fr 100px;
+        grid-column-gap: 15px;
+        grid-row-gap: 15px;
+    }
+
+}
+   
+
+
